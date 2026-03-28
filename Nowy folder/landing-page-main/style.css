@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.6px;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #642b2b;
+  color: beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  padding: 4em;
+  min-height: 25vh;
+}
+nav {
+  margin: 3em auto;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  margin: auto;
+}
+nav ul a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 1.5em;
+}
+nav ul a:hover {
+  background-color: #642b2b;
+  color: beige;
+}
+.section-item {
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  display: none;
+  text-align: justify;
+  margin-bottom: 4em;
+}
+.section-item img {
+  max-width: 40%;
+  border-radius: 10%;
+  margin: 0 1em;
+}
+.section-item.active {
+  display: block;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5em;
+  padding: 0 20px;
+}
+.intro p {
+  margin-bottom: 2em;
+}
+footer {
+  background-color: #642b2b;
+  text-align: center;
+  color: beige;
+  padding: 1em;
+}
+section h2 {
+  text-align: center;
+}
+.example {
+  display: block;
+  padding: 2em;
+  clear: both;
+}
+
+.example img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+@media (min-width: 750px) {
+  .example img {
+    float: left;
+    max-width: 50%;
+    margin: 0 1.5em 1em 0;
+  }
+
+  .example figcaption {
+    padding-top: 1em;
+  }
+}
+
+.example::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media (max-width: 750px) {
+  header h1 {
+    font-size: 25px;
+  }
+
+  header {
+    text-align: center;
+    gap: 0.5em;
+  }
+  nav {
+    margin: 1.5em auto;
+  }
+  nav ul a {
+    padding: 0.7em;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+  figcaption {
+    color: rgba(55, 55, 55, 0.743);
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+  strong {
+    color: black;
+  }
+  .example {
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .example img {
+    max-width: 100%;
+  }
+}
